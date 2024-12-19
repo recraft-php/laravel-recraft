@@ -1,0 +1,41 @@
+{
+    "name": "recraft-php/laravel-recraft",
+    "description": "A laravel sdk for recraft ai",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^7.9",
+        "laravel/framework": "^11.36"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Recraft\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "julius George",
+            "email": "julius.business12@gmail.com",
+            "homepage": "https://facebook.com/shiningge.julius"
+        }
+    ],
+    "autoload-dev": {
+         "psr-4": {
+            "Recraft\\Tests\\": "tests/"
+         }
+     },
+     "scripts": {
+         "test": "./vendor/bin/phpunit"
+     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Recraft\\RecraftServiceProvider"
+            ]
+        }
+    }
+}
