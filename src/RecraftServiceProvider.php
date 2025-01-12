@@ -13,8 +13,6 @@ class RecraftServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //$this->app->singleton(RecraftManager::class);
-        //$this->app->singleton(RecraftMutatorManager::class);
         $this->mergeConfigFrom(
             __DIR__ . '/../config/recraft.php',
             'recraft'
@@ -28,17 +26,6 @@ class RecraftServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*RecraftMoney::formatter('recraft', function () {
-            return new RecraftMoneyFormatter(
-                new \NumberFormatter('en_US', \NumberFormatter::CURRENCY)
-            );
-        });
-
-        Recraft::locker('recraft', RecraftLocker::class);
-
-        Recraft::action('transfer', RecraftTransferAction::class);
-        Recraft::action('credit_debit', RecraftCreditDebitAction::class);
-        */
         $this->addPublishes();
         //$this->addCommands();
     }

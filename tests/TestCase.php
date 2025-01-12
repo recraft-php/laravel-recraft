@@ -17,6 +17,6 @@ abstract class TestCase extends BaseTestCase
     protected function getEnvironmentSetUp($app)
     {
         // Customize environment for your package, e.g., set up configuration or database
-        $app['config']->set('recraft.api_key', 'xxxxxxxx');
+        //$app['config']->set('recraft.api_key', 'xxxxxxxx');
     }
 }

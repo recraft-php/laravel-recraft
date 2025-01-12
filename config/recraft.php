@@ -16,12 +16,19 @@ return [
      | Default recraft model
      |---------------------------------------
      |
-     | the models recraft model
+     | the default recraft model
      |
      */
+    "default_model" => "v3",
+
+    /*
+     |-------------------------------------
+     | Recraft models
+     |----------------------------------
+     | different recraft models
+     */
     "models" => [
-        "default" => "recraftv3",
-        "20B" => "recraft20b",
+        "20b" => "recraft20b",
         "v3" => "recraftv3"
     ]
 ];
