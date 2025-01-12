@@ -20,7 +20,8 @@ return [
      |
      */
     "models" => [
-        "default" => "helloworld",
-        "model" => "helloworld"
+        "default" => "recraftv3",
+        "20B" => "recraft20b",
+        "v3" => "recraftv3"
     ]
 ];

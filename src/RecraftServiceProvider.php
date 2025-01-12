@@ -3,14 +3,6 @@
 namespace Recraft;
 
 use Illuminate\Support\ServiceProvider;
-use Recraft\RecraftManager;
-use Recraft\Facades\Recraft;
-use Recraft\Internals\RecraftLocker;
-use Recraft\Internals\RecraftMutatorManager;
-use Recraft\Money\Formatter\RecraftMoneyFormatter;
-use Recraft\Money\RecraftMoney;
-use Recraft\Transaction\RecraftCreditDebitAction;
-use Recraft\Transaction\RecraftTransferAction;
 
 class RecraftServiceProvider extends ServiceProvider
 {
