@@ -17,6 +17,7 @@ class RecraftServiceProvider extends ServiceProvider
             __DIR__ . '/../config/recraft.php',
             'recraft'
         );
+        $this->app->bind('recraft', Recraft::class);
     }
 
     /**
