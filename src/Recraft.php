@@ -37,7 +37,10 @@ class Recraft
      */
     protected $styles = [
         "digital" => "digital_illustration",
-        "realistic" => 'realistic_image'
+        "realistic" => 'realistic_image',
+        "vector" => 'vector_illustration',
+        "icon"  => 'icon',
+        "logo" => 'logo_raster'
     ];
 
     /**
