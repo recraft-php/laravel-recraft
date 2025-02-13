@@ -134,7 +134,7 @@ class Recraft
         if (isset($this->styles[$style])) {
             return $this->styles[$style];
         }
-        return $this->styles[self::DEFAULT_STYLE];
+        return $style;
     }
 
     /**
@@ -156,9 +156,12 @@ class Recraft
      */
     protected function getSize(string $size)
     {
-        $supported_sizes = array_keys($this->sizes);
         if (!isset($this->sizes[$size])) {
-            throw new Exception("unkown image size [$size] supported sizes are " . implode(",", $supported_sizes));
+            //check if the size is in WxH format return it if it is valid size otherwise throw an exception
+            if (preg_match('/^\d+x\d+$/', $size)) {
+                return $size;
+            }
+            throw new Exception("the size format [$size] is not supported, supported size format is WxH");
         }
         return $this->sizes[$size];
     }
@@ -171,7 +174,7 @@ class Recraft
         $requiredKeys = ["prompt"];
         $payload = [
             "model" => $this->model,
-            "style" => $this->styles["digital"],
+            "style" => $this->styles[self::DEFAULT_STYLE],
             "response_format" => $this->output_format,
             "size" => $this->getSize("square_large")
         ];
